@@ -1,0 +1,24 @@
+# .github/workflows/update-citations.yml
+name: update-citations
+on:
+  schedule: # run every day at 06:00 CET
+    - cron: "0 4 * * *" # UTC-2 → 06:00 Europe/Berlin
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pull latest numbers from SerpAPI
+        run: |
+          pip install serpapi
+          python scripts/build_json.py \
+                 "${{ secrets.SERPAPI_KEY }}" MI0C9mAAAAAJ
+
+      - name: Commit the new JSON
+        run: |
+          git config --global user.email "bot@example.com"
+          git config --global user.name  "cite-bot"
+          git add ./citations.json
+          git commit -m "daily citation refresh" || echo "no change"
+          git push
