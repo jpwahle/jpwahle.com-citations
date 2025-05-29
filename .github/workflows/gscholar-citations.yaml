@@ -3,6 +3,9 @@ name: update-citations
 on:
   schedule: # run every day at 06:00 CET
     - cron: "0 4 * * *" # UTC-2 → 06:00 Europe/Berlin
+  push:
+    branches:
+      - main
 jobs:
   scrape:
     runs-on: ubuntu-latest
