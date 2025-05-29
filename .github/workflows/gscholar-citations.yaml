@@ -6,6 +6,10 @@ on:
   push:
     branches:
       - main
+
+permissions:
+  contents: write
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
@@ -19,9 +23,11 @@ jobs:
                  "${{ secrets.SERPAPI_KEY }}" MI0C9mAAAAAJ
 
       - name: Commit the new JSON
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.email "bot@example.com"
           git config --global user.name  "cite-bot"
           git add ./citations.json
           git commit -m "daily citation refresh" || echo "no change"
-          git push
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:main
