@@ -15,7 +15,7 @@ jobs:
       - name: Pull latest numbers from SerpAPI
         run: |
           pip install serpapi
-          python scripts/build_json.py \
+          python build_json.py \
                  "${{ secrets.SERPAPI_KEY }}" MI0C9mAAAAAJ
 
       - name: Commit the new JSON
