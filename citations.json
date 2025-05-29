@@ -1,0 +1,27 @@
+{
+  "total": 428,
+  "h_index": 12,
+  "i10_index": 12,
+  "year_graph": [
+    {
+      "year": 2021,
+      "citations": 5
+    },
+    {
+      "year": 2022,
+      "citations": 48
+    },
+    {
+      "year": 2023,
+      "citations": 112
+    },
+    {
+      "year": 2024,
+      "citations": 175
+    },
+    {
+      "year": 2025,
+      "citations": 84
+    }
+  ]
+}
