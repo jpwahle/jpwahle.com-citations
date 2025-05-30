@@ -1,8 +1,9 @@
 # .github/workflows/update-citations.yml
 name: update-citations
 on:
-  schedule: # run every day at 06:00 CET
-    - cron: "0 4 * * *" # UTC-2 → 06:00 Europe/Berlin
+  schedule: # run twice a day at 06:00 and 18:00 CET
+    - cron: "0 4 * * *"  # 06:00 CET
+    - cron: "0 16 * * *" # 18:00 CET
   push:
     branches:
       - main
