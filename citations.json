@@ -1,43 +1,31 @@
 {
-  "total": 847,
-  "h_index": 17,
-  "i10_index": 22,
+  "total": 776,
+  "h_index": 16,
+  "i10_index": 19,
   "year_graph": [
     {
-      "year": 2018,
+      "year": 2021,
       "citations": 5
     },
     {
-      "year": 2019,
-      "citations": 6
-    },
-    {
-      "year": 2020,
-      "citations": 8
-    },
-    {
-      "year": 2021,
-      "citations": 12
-    },
-    {
       "year": 2022,
-      "citations": 57
+      "citations": 48
     },
     {
       "year": 2023,
-      "citations": 114
+      "citations": 109
     },
     {
       "year": 2024,
-      "citations": 175
+      "citations": 164
     },
     {
       "year": 2025,
-      "citations": 425
+      "citations": 409
     },
     {
       "year": 2026,
-      "citations": 33
+      "citations": 35
     }
   ]
 }
