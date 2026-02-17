@@ -1,5 +1,5 @@
 {
-  "total": 804,
+  "total": 807,
   "h_index": 17,
   "i10_index": 21,
   "year_graph": [
@@ -21,11 +21,11 @@
     },
     {
       "year": 2025,
-      "citations": 420
+      "citations": 422
     },
     {
       "year": 2026,
-      "citations": 46
+      "citations": 47
     }
   ]
 }
